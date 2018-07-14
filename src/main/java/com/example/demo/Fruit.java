@@ -9,46 +9,67 @@ public class Fruit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long fruitID;
+    private String fruit_name;
+    private String available_day;
+    private String start_time;
+    private String end_time;
+    private String picture;
+    private String location;
 
-    private String name;
-    private String image;
-
-    @OneToMany (mappedBy = "fruit",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER)
-    public Set<Week> weekdays;
-
-
-    public long getId() {
-        return id;
+    public long getFruitID() {
+        return fruitID;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setFruitID(long fruitID) {
+        this.fruitID = fruitID;
     }
 
-    public String getName() {
-        return name;
+    public String getFruit_name() {
+        return fruit_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFruit_name(String fruit_name) {
+        this.fruit_name = fruit_name;
     }
 
-    public Set<Week> getWeekdays() {
-        return weekdays;
+    public String getAvailable_day() {
+        return available_day;
     }
 
-    public void setWeekdays(Set<Week> weekdays) {
-        this.weekdays = weekdays;
+    public void setAvailable_day(String available_day) {
+        this.available_day = available_day;
     }
 
-    public String getImage() {
-        return image;
+    public String getStart_time() {
+        return start_time;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
+    }
+
+    public String getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
