@@ -14,16 +14,16 @@
 <div class="container jumbotron">
     <h1 class="text-center">Search Fruits</h1>
     <div class="col-md-6 col-md-offset-3">
-        <form th:action="@{/process}" method="post" action="#">
+        <form th:action="@{/processFruit}" method="post" action="#">
             <div>Enter Fruits <span class="text-success"></span> to search</div>
             <label>Fruits Name: </label><input type="text" name="name"/>
         </form><br>
 
-        <form method="POST" action="/add" th:object="${actor}"
+        <form method="POST" action="/add" th:object="${fruit}"
               enctype="multipart/form-data">
 
 
-            <input type="file" name="file"/>Choose Image<br/><br/>
+            <input type="file" name="file"/>Choose Image <br/><br/>
             <input type="submit" name="Submit"/>
 
         </form>
@@ -40,10 +40,10 @@
         </thead>
         <tbody>
         <tr th:each="list:${listResult}">
-            <td th:text="${list.name}"></td>
+            <td th:text="${list.location}"></td>
             <td >
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="${list.image}" alt="image">
+                    <img class="card-img-top" src="${list.picture}" alt="image">
 
                 </div>
             </td>

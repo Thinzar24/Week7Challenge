@@ -10,12 +10,13 @@ public class Fruit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long fruitID;
-    private String fruit_name;
-    private String available_day;
-    private String start_time;
-    private String end_time;
+    private String fruitName;
+    private String availableDay;
+    private String startTime;
+    private String endTime;
     private String picture;
     private String location;
+
 
     public long getFruitID() {
         return fruitID;
@@ -25,36 +26,36 @@ public class Fruit {
         this.fruitID = fruitID;
     }
 
-    public String getFruit_name() {
-        return fruit_name;
+    public String getFruitName() {
+        return fruitName;
     }
 
-    public void setFruit_name(String fruit_name) {
-        this.fruit_name = fruit_name;
+    public void setFruitName(String fruitName) {
+        this.fruitName = fruitName;
     }
 
-    public String getAvailable_day() {
-        return available_day;
+    public String getAvailableDay() {
+        return availableDay;
     }
 
-    public void setAvailable_day(String available_day) {
-        this.available_day = available_day;
+    public void setAvailableDay(String availableDay) {
+        this.availableDay = availableDay;
     }
 
-    public String getStart_time() {
-        return start_time;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setStart_time(String start_time) {
-        this.start_time = start_time;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
-    public String getEnd_time() {
-        return end_time;
+    public String getEndTime() {
+        return endTime;
     }
 
-    public void setEnd_time(String end_time) {
-        this.end_time = end_time;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
     public String getPicture() {
